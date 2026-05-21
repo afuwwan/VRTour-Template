@@ -193,6 +193,13 @@ header {
     backdrop-filter: blur(15px);
     box-shadow: 0 4px 15px rgba(0,0,0,0.5);
     z-index: 10;
+    transition: all 0.4s ease;
+}
+
+.minimap-content {
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 .minimap-container img {
@@ -200,6 +207,59 @@ header {
     height: auto;
     display: block;
     border-radius: 8px;
+    transition: all 0.4s ease;
+}
+
+.minimap-close {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: var(--secondary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 12;
+    transition: all 0.2s ease;
+}
+
+.minimap-close:hover {
+    transform: scale(1.1);
+    background: #ff1565;
+}
+
+/* Maximized State */
+.minimap-container.maximized {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    height: fit-content;
+    max-width: 90vw;
+    max-height: 90vh;
+    bottom: auto;
+    right: auto;
+    padding: 15px;
+    z-index: 11;
+}
+
+.minimap-container.maximized .minimap-close {
+    display: flex;
+}
+
+.minimap-container.maximized img {
+    width: auto;
+    height: auto;
+    max-width: calc(90vw - 30px);
+    max-height: calc(90vh - 30px);
+    object-fit: contain;
 }
 
 /* Mobile Responsiveness */
@@ -266,17 +326,19 @@ header {
         width: 140px;
         border-radius: 6px;
     }
+
+    /* Aturan maximized dihapus karena fit-content sudah cukup otomatis */
 }
 
 /* For very small heights (Landscape mobile) */
 @media (max-height: 500px) {
     .minimap-container {
-        bottom: 20px;
-        right: 80px; /* Geser ke kiri dari tombol VR di pojok */
+        bottom: 15px;
+        right: 75px; /* Geser ke kiri dari tombol VR di pojok */
         padding: 6px;
     }
     .minimap-container img {
-        width: 120px;
+        width: 80px;
     }
     
     .info-panel {

@@ -31,6 +31,20 @@ document.addEventListener('DOMContentLoaded', () => {
             panel.classList.add('visible');
         }
     };
+
+    // Maximize minimap
+    window.maximizeMap = (event) => {
+        event.stopPropagation();
+        const minimap = document.getElementById('minimap-container');
+        minimap.classList.add('maximized');
+    };
+
+    // Minimize minimap
+    window.minimizeMap = (event) => {
+        event.stopPropagation();
+        const minimap = document.getElementById('minimap-container');
+        minimap.classList.remove('maximized');
+    };
 });
 
 // A-Frame component to handle scene transitions

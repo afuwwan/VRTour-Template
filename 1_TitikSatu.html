@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Museum Brawijaya Tour°</title>
-    <meta name="description" content="Jelajahi Museum Brawijaya secara virtual dengan teknologi 360° VR">
+    <title>Virtual Tour°</title>
+    <meta name="description" content="Jelajahi dunia virtual dengan teknologi 360° VR">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,7 +55,7 @@
                     
                     'Tentang Tour', 
                     
-                    'Selamat datang di Virtual Tour Museum Brawijaya. Silakan jelajahi lingkungan museum dengan mengikuti petunjuk arah.Selamat datang di Virtual Tour Museum Brawijaya. Silakan jelajahi lingkungan museum dengan mengikuti petunjuk arah.'
+                    'Selamat datang di Virtual Tour. Silakan jelajahi lingkungan virtual dengan mengikuti petunjuk arah. Selamat datang di Virtual Tour. Silakan jelajahi lingkungan virtual dengan mengikuti petunjuk arah.'
                     
                     )">
                 <i style="font-style: normal;">i</i>
@@ -70,9 +70,12 @@
 
 <!--====================================================== Section 7 ====================================================-->
         <!-- Minimap Layout -->
-        <div class="minimap-container">
-            <!-- Ganti src dengan referensi gambar peta yang sesuai dari folder assets/map -->
-            <img src="./assets/map/..." alt="Minimap">
+        <div class="minimap-container" id="minimap-container">
+            <div class="minimap-close" id="minimap-close" onclick="minimizeMap(event)">×</div>
+            <div class="minimap-content">
+                <!-- Ganti src dengan referensi gambar peta yang sesuai dari folder assets/map -->
+                <img src="./assets/map/map.jpeg" alt="Minimap" onclick="maximizeMap(event)">
+            </div>
         </div>
 <!--_____________________________________________________________________________________________________________________-->
     </div>
