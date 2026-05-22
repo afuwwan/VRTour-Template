@@ -109,8 +109,9 @@ header {
 /* Info Panel */
 .info-panel {
     position: absolute;
-    bottom: 30px;
-    left: 30px;
+    bottom: 90px;
+    right: 30px;
+    left: auto;
     width: 380px;
     padding: 25px;
     background: var(--bg-dark);
@@ -184,8 +185,9 @@ header {
 /* Minimap */
 .minimap-container {
     position: absolute;
-    bottom: 90px;
-    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    right: auto;
     padding: 12px;
     border: 1px solid var(--glass-border);
     border-radius: 15px;
@@ -293,12 +295,13 @@ header {
 
     /* Info Panel */
     .info-panel {
-        width: calc(100% - 40px);
-        left: 20px;
-        top: 80px; /* Pindah ke atas di bawah header agar tidak menutupi minimap */
-        bottom: auto;
+        width: 300px;
+        right: 20px;
+        left: auto;
+        top: auto;
+        bottom: 80px;
         padding: 20px;
-        transform: translateY(-50px);
+        transform: translateY(50px);
     }
     
     .info-panel.visible {
@@ -316,8 +319,9 @@ header {
 
     /* Minimap */
     .minimap-container {
-        bottom: 80px;
-        right: 20px;
+        bottom: 20px;
+        left: 20px;
+        right: auto;
         padding: 8px;
         border-radius: 12px;
     }
@@ -334,7 +338,8 @@ header {
 @media (max-height: 500px) {
     .minimap-container {
         bottom: 15px;
-        right: 75px; /* Geser ke kiri dari tombol VR di pojok */
+        left: 20px;
+        right: auto;
         padding: 6px;
     }
     .minimap-container img {
@@ -342,8 +347,10 @@ header {
     }
     
     .info-panel {
-        top: 60px;
-        left: 20px;
+        top: auto;
+        bottom: 70px;
+        right: 20px;
+        left: auto;
         width: 300px;
         padding: 15px;
     }
